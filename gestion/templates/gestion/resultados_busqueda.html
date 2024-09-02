@@ -1,0 +1,14 @@
+{% extends 'gestion/base.html' %}
+
+{% block titulo %}Resultados de Búsqueda{% endblock %}
+
+{% block contenido %}
+    <h2>Resultados de la Búsqueda para "{{ consulta }}"</h2>
+    <ul>
+        {% for libro in resultados %}
+            <li>{{ libro.titulo }} por {{ libro.autor.nombre }}</li>
+        {% empty %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'gestion/base.html' %}
+
+{% block titulo %}Agregar Autor{% endblock %}
+
+{% block contenido %}
+    <h2>Agregar un Nuevo Autor</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}

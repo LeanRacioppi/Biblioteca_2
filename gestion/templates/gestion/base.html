@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block titulo %}Mi Biblioteca{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block encabezado %}Bienvenido a Mi Biblioteca{% endblock %}</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'agregar_autor' %}">Agregar Autor</a></li>
+            <li><a href="{% url 'agregar_categoria' %}">Agregar Categoría</a></li>
+            <li><a href="{% url 'agregar_libro' %}">Agregar Libro</a></li>
+            <li><a href="{% url 'buscar_libros' %}">Buscar Libros</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi Biblioteca</p>
+    </footer>
+</body>
+</html>
